@@ -1032,4 +1032,15 @@ body:not(.contact-on) .contact-section {
     font-size: 18px; /* Adjust font size */
     font-weight: 600; /* Adjust font weight */
     color: #fff; /* Text color */
-    background-color: #866BAF; /* Purple backgro
+    background-color: #866BAF; /* Purple background color */
+    border-radius: 25px; /* Rounded corners */
+    text-decoration: none; /* Remove underline */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow for depth */
+}
+
+.about-link:hover {
+    background-color: #9b7fcf; /* Lighter purple on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
