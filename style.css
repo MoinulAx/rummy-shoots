@@ -164,15 +164,43 @@ a:hover {
         margin: 10px;
     }
 
+    /* Arrange buttons into a vertical column */
+    .hero-section p {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
     .hero-section p span {
-        display: block;
-        width: 100%;
+        display: inline-block;
         text-align: center;
-        padding: 10px;
+        padding: 12px 15px; /* Reduced padding to make buttons narrower */
         font-size: 18px;
-        margin-bottom: 10px;
-        position: relative;
-        overflow: hidden;
+        color: #fff;
+        background: #866BAF;
+        border-radius: 12px;
+        box-shadow: 0 4px 8px #866BAF;
+        transition: transform 200ms ease, box-shadow 200ms ease, background 300ms ease;
+        margin: 5px;
+        font-weight: bold;
+        cursor: pointer;
+        text-decoration: none;
+        transform-origin: center;
+        width: 70%; /* Reduced width to make buttons less wide */
+        max-width: 250px; /* Smaller max-width for less wide buttons */
+    }
+
+    /* Hover Effect */
+    .hero-section p span:hover {
+        transform: scale(1.1);
+        background: #ff85c0;
+        box-shadow: 0 6px 12px rgba(255, 105, 180, 0.7);
+    }
+
+    /* Click effect (Active state) */
+    .hero-section p span:active {
+        transform: scale(0.95);
+        box-shadow: 0 2px 4px rgba(255, 105, 180, 0.8);
     }
 
     /* Arrow Effect for the Hero Span */
@@ -198,8 +226,6 @@ a:hover {
         transform: translateY(-5px);
     }
 }
-
-
 
 
 body.about-on .hero-section {
