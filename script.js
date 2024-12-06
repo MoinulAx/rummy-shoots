@@ -80,11 +80,18 @@
 		$("body").removeClass("nature-on");
 	});
 
-	
+
+	$(".shoot3").on('click', function () {
+		$("body").addClass("shoot3-on");
+	});
+	$(".shoot3-close").on('click', function () {
+		$("body").removeClass("shoot3-on");
+	});
+		
 	//Image popup logic
 	document.addEventListener('DOMContentLoaded', function() {
 		// Select all images from the sections
-		const images = document.querySelectorAll('.travel-section img, .wildlife-section img, .nature-section img');
+		const images = document.querySelectorAll('.travel-section img, .wildlife-section img, .nature-section img, .shoot3-section img');
 		const popup = document.getElementById('image-popup');
 		const popupImage = document.getElementById('popup-image');
 		const closePopup = document.querySelector('.close-popup');
