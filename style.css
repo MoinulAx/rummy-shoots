@@ -169,6 +169,7 @@ a:hover {
         display: flex;
         flex-direction: column;
         align-items: center;
+        align-content: center;
     }
 
     .hero-section p span {
@@ -726,17 +727,7 @@ body.shoot3-on .shoot3-section {
         font-size: 18px; /* Adjusted font size */
     }
 
-    .travel-section h3,
-    .wildlife-section h3,
-    .nature-section h3 {
-        font-size: 32px; /* Adjusted for smaller screens */
-    }
-
-    .travel-section p,
-    .wildlife-section p,
-    .nature-section p {
-        font-size: 12px; /* Adjusted for smaller screens */
-    }
+    
 
     .link-to-portfolio {
         width: 40px; /* Smaller button */
@@ -757,44 +748,12 @@ body.shoot3-on .shoot3-section {
         font-size: 18px; /* Further adjusted for very small screens */
     }
 
-    .about-text, .contact-text {
-        font-size: 14px; /* Further adjusted for very small screens */
-    }
-
-    .about-section img, .travel-section img, .wildlife-section img, .nature-section img {
-        width: 60px; /* Even smaller images */
-        height: 60px; /* Adjusted height */
-    }
-
-    .about-section p span, .travel-section p span, .wildlife-section p span, .nature-section p span {
-        font-size: 16px; /* Further adjusted font size */
-    }
-
-    .travel-section h3,
-    .wildlife-section h3,
-    .nature-section h3 {
-        font-size: 28px; /* Further adjusted for very small screens */
-    }
-
-    .travel-section p,
-    .wildlife-section p,
-    .nature-section p {
-        font-size: 10px; /* Further adjusted for very small screens */
-    }
-
-    .link-to-portfolio {
-        width: 30px; /* Even smaller button */
-        height: 30px; /* Adjusted height */
-    }
-
-    .about-section {
-        padding: 60px; /* Further increase padding for very small screens */
-    }
+   
 }
 
 /* Popup styles */
 .image-popup {
-    display: none; /* Hidden by default */
+    display: none; 
     position: fixed;
     z-index: 1000;
     left: 0;
@@ -803,23 +762,30 @@ body.shoot3-on .shoot3-section {
     height: 100%;
     overflow: auto;
     background-color: rgba(0,0,0,0.8);
+    
 }
 
 /* Centering styles applied only when popup is active */
 .image-popup.active {
-    display: flex; /* Use flexbox to center content */
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    
 }
 
 .popup-content {
-    max-width: 80%;
-    max-height: 80%;
+    max-width: 90%;
+    max-height: 90%;
     margin: auto;
     display: block;
     width: auto;
     height: auto;
     object-fit: contain; /* Maintain aspect ratio */
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
 }
 
 .close-popup {
