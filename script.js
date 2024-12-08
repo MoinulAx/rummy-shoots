@@ -109,4 +109,11 @@
 			popup.style.display = 'none'; // Hide the popup
 		});
 
-		// Optional:
+		// Optional: Close popup when clicking outside the image
+		popup.addEventListener('click', function(event) {
+			if (event.target === popup) {
+				popup.style.display = 'none';
+			}
+		});
+	});
+})(jQuery);
