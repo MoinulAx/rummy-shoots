@@ -162,10 +162,7 @@ a:hover {
         font-size: 14px;
         padding: 10px;
         margin: 10px;
-    }
-
-    /* Arrange buttons into a vertical column */
-    .hero-section p {
+        margin-top: 25px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -175,20 +172,17 @@ a:hover {
     .hero-section p span {
         display: inline-block;
         text-align: center;
-        padding: 12px 15px; /* Reduced padding to make buttons narrower */
+        padding: 12px 20px; /* Padding around the text */
         font-size: 18px;
         color: #fff;
-        background: #866BAF;
-        border-radius: 12px;
-        box-shadow: 0 4px 8px #866BAF;
         transition: transform 200ms ease, box-shadow 200ms ease, background 300ms ease;
-        margin: 5px;
-        font-weight: bold;
+        margin: 10px; /* Spacing between spans */
         cursor: pointer;
         text-decoration: none;
         transform-origin: center;
-        width: 70%; /* Reduced width to make buttons less wide */
-        max-width: 250px; /* Smaller max-width for less wide buttons */
+        width: 70%;
+        max-width: 250px;
+        position: relative; /* Necessary for positioning the arrow */
     }
 
     /* Hover Effect */
@@ -201,21 +195,21 @@ a:hover {
     /* Click effect (Active state) */
     .hero-section p span:active {
         transform: scale(0.95);
-        box-shadow: 0 2px 4px rgba(255, 105, 180, 0.8);
+        box-shadow: 0 2px 4px rgba(255, 105, 180, 0.7);
     }
 
     /* Arrow Effect for the Hero Span */
     .hero-section p span:before {
         content: '';
         position: absolute;
-        bottom: 5px;
-        left: 50%;
+        top: 100%; /* Places the arrow below the text */
+        left: 55%; /* Centers the arrow horizontally */
+        transform: translateX(-50%); /* Ensures horizontal centering */
         height: 20px;
         width: 20px;
-        margin-left: -10px;
         background-repeat: no-repeat;
         background-position: center;
-        background-size: 20px 20px;
+        background-size: contain;
         background-image: url('http://www.ivang-design.com/svg-load/portfolio/down.svg');
         opacity: 0.2;
         transition: opacity 200ms ease, transform 200ms ease;
@@ -224,7 +218,7 @@ a:hover {
     /* Hover Effect to make the arrow appear more prominently */
     .hero-section p span:hover:before {
         opacity: 1;
-        transform: translateY(-5px);
+        transform: translateX(-50%) translateY(-5px); /* Adds a subtle upward motion on hover */
     }
 }
 
